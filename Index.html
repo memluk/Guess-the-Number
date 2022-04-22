@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Style.css">
+        <title>JS-Course-ReDi</title>
+    </head>
+    <body>
+        <h1>I'm learning JavaScript:</h1><br><br>
+		<h2>Play Guess-the-Number Game!</h2>
+
+		<table>
+			<tr><th></th><th></th><th></th><th></th></tr> <!-- table header will be empty -->
+			<tr>
+				<td colspan="2">
+					<select id="diff" onchange="setDifficulty()">
+						<option>Select difficulty</option>
+						<option id="easy" value="Easy" onclick="newStart()">Easy (1-10)</option>
+						<option id="medium" value="Medium" onclick="newStart()">Medium (1-100)</option>
+						<option id="hard" value="Hard" onclick="newStart()">Hard (1-1000)</option>
+					</select>
+				</td>
+				<td colspan="2">
+					<button onclick="newStart()">Start a new game</button>
+				</td>
+			</tr>
+			<tr>
+				<td><input id="input" type="number" min="1" max="1000"></td>
+				<td><button onclick="checkNumbers()">Guess</button></td>
+				<td></td>
+				<td><button onclick="suggestNumber()">Help me!</button></td>
+			</tr>
+		</table>
+		<div id="helpBox"></div>
+		<div id="guessTrack"></div>
+
+		<script src="main.js"></script>
+    </body>
+</html>
+
+
